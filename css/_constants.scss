@@ -1,0 +1,49 @@
+@import './variables';
+
+@mixin flex{
+    display: flex;
+}
+@mixin flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flexAlign{
+    display: flex;
+    align-items: center;
+}
+@mixin flexSpaceBtw{
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+}
+@mixin flexCol{
+    display: flex;
+    flex-direction: column;
+}
+@mixin headings{
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+@mixin paragraph{
+    color: $Dark-grayish-blue;
+    width: 50%;
+    font-size: 0.9rem;
+    word-spacing: 0.3rem;
+    line-height: 1.3rem;
+}
+@mixin textCenter{
+    text-align: center;
+}
+@mixin button{
+        background: $bright-red;
+        padding: 0.9rem 2.5rem;
+        border-radius: 2.5rem;
+        border: none;
+        color: $Vary-light-gray;
+        font-weight: bold;
+        cursor: pointer;
+        &:hover{
+            background: $Very-pale-red;
+        }
+}

@@ -1,0 +1,655 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
+body {
+  max-width: 100%;
+  background-image: url(../images/bg-tablet-pattern.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  align-items: center;
+  margin: 1.7rem 3rem;
+  padding: 1.5rem 3rem;
+}
+.navbar_logo {
+  color: black;
+  cursor: pointer;
+}
+.navbar_routes {
+  display: flex;
+  gap: 1.8rem;
+}
+.navbar_routes a {
+  color: hsl(228deg, 39%, 23%);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+.navbar_routes a:hover {
+  color: hsl(227deg, 12%, 61%);
+}
+.navbar_btn button {
+  background: hsl(12deg, 88%, 59%);
+  padding: 0.9rem 2.5rem;
+  border-radius: 2.5rem;
+  border: none;
+  color: hsl(0deg, 0%, 98%);
+  font-weight: bold;
+  cursor: pointer;
+}
+.navbar_btn button:hover {
+  background: hsl(12deg, 100%, 74%);
+}
+.navbar .hamburger {
+  display: flex;
+  align-items: center;
+}
+.navbar .hamburger .hamburger-icon {
+  cursor: pointer;
+}
+.navbar .hamburger .close-icon {
+  visibility: hidden;
+  cursor: pointer;
+}
+.navbar .menu {
+  visibility: hidden;
+  background: hsl(0deg, 0%, 98%);
+  background-color: hsl(0deg, 0%, 98%);
+  color: hsl(233deg, 12%, 13%);
+  position: absolute;
+  width: 80%;
+  right: 10%;
+  top: 20%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 1rem 0;
+}
+.navbar .menu h2 {
+  cursor: pointer;
+}
+.navbar .menu h2:hover {
+  color: hsl(12deg, 88%, 59%);
+}
+
+.section-1 {
+  margin: 1.5rem 4rem;
+  padding: 1rem 2rem;
+  display: flex;
+}
+.section-1 div {
+  width: 50%;
+}
+.section-1 .left {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-shrink: 3;
+}
+.section-1 .left h1 {
+  font-weight: bold;
+  font-size: 2.5rem;
+  width: 75%;
+}
+.section-1 .left p {
+  color: hsl(227deg, 12%, 61%);
+  width: 50%;
+  font-size: 0.9rem;
+  word-spacing: 0.3rem;
+  line-height: 1.3rem;
+}
+.section-1 .left button {
+  align-items: flex-start;
+  background: hsl(12deg, 88%, 59%);
+  padding: 0.9rem 2.5rem;
+  border-radius: 2.5rem;
+  border: none;
+  color: hsl(0deg, 0%, 98%);
+  font-weight: bold;
+  cursor: pointer;
+}
+.section-1 .left button:hover {
+  background: hsl(12deg, 100%, 74%);
+}
+.section-1 .right img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  min-height: 41vh;
+}
+
+.section-2 {
+  margin: 3rem 4rem;
+  padding: 1rem 2rem;
+  display: flex;
+  gap: 1rem;
+}
+.section-2 h1 {
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+.section-2 p {
+  color: hsl(227deg, 12%, 61%);
+  width: 50%;
+  font-size: 0.9rem;
+  word-spacing: 0.3rem;
+  line-height: 1.3rem;
+}
+.section-2 .left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.section-2 .right {
+  width: 50%;
+}
+.section-2 .right h1 {
+  font-size: 1.2rem;
+}
+.section-2 .right p {
+  width: auto;
+}
+.section-2 .right .content {
+  display: flex;
+  gap: 1.8rem;
+  margin-bottom: 2.5rem;
+}
+.section-2 .right .content .index {
+  width: 4rem;
+  padding: 1rem;
+  background-color: hsl(12deg, 88%, 59%);
+  height: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+}
+.section-2 .right .content .index h1 {
+  font-weight: bold;
+  font-size: 1rem;
+  color: hsl(0deg, 0%, 98%);
+}
+.section-2 .right .content .texts {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.section-3 {
+  padding: 1rem;
+}
+.section-3 h1 {
+  text-align: center;
+}
+.section-3 .slider {
+  display: flex;
+  gap: 3rem;
+  margin: 1.5rem 3rem;
+  padding: 0rem 2rem;
+  overflow: auto;
+}
+.section-3 .slider::-webkit-scrollbar {
+  display: none;
+}
+.section-3 .slider .comments {
+  min-width: 25rem;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+.section-3 .slider .comments img {
+  width: 5rem;
+  height: 5rem;
+  position: relative;
+  top: 15%;
+}
+.section-3 .slider .comments .info {
+  background: hsl(0deg, 0%, 98%);
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-height: 12rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-3 .slider .comments .info h1 {
+  margin-top: 1.5rem;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+.section-3 .slider .comments .info p {
+  color: hsl(227deg, 12%, 61%);
+  width: 50%;
+  font-size: 0.9rem;
+  word-spacing: 0.3rem;
+  line-height: 1.3rem;
+  width: 100%;
+  font-size: 0.8rem;
+}
+.section-3 button {
+  background: hsl(12deg, 88%, 59%);
+  padding: 0.9rem 2.5rem;
+  border-radius: 2.5rem;
+  border: none;
+  color: hsl(0deg, 0%, 98%);
+  font-weight: bold;
+  cursor: pointer;
+}
+.section-3 button:hover {
+  background: hsl(12deg, 100%, 74%);
+}
+.section-3 .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0rem 0rem 0rem;
+}
+
+.section-4 {
+  background: hsl(12deg, 88%, 59%);
+  padding: 4rem 5.5rem;
+  margin: 3em 0rem 0rem 0rem;
+  background-image: url("../images/bg-simplify-section-desktop.svg");
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.section-4 h1 {
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: hsl(0deg, 0%, 98%);
+  width: 45%;
+}
+.section-4 button {
+  background: hsl(12deg, 88%, 59%);
+  padding: 0.9rem 2.5rem;
+  border-radius: 2.5rem;
+  border: none;
+  color: hsl(0deg, 0%, 98%);
+  font-weight: bold;
+  cursor: pointer;
+  background: hsl(0deg, 0%, 98%);
+  color: hsl(12deg, 88%, 59%);
+  height: 3.5rem;
+}
+.section-4 button:hover {
+  background: hsl(12deg, 100%, 74%);
+}
+
+footer {
+  padding: 4rem;
+  background-color: hsl(233deg, 12%, 13%);
+  display: flex;
+  justify-content: space-around;
+}
+footer .left {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  gap: 9rem;
+}
+footer .left .logo {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+footer .left .logo .socials {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+footer .left .routes {
+  color: hsl(227deg, 12%, 61%);
+  width: 50%;
+  font-size: 0.9rem;
+  word-spacing: 0.3rem;
+  line-height: 1.3rem;
+  color: hsl(0deg, 0%, 98%);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+footer .left .routes > p:hover {
+  color: hsl(12deg, 88%, 59%);
+}
+footer .right {
+  display: flex;
+  gap: 5rem;
+}
+footer .right .extras {
+  color: hsl(227deg, 12%, 61%);
+  width: 50%;
+  font-size: 0.9rem;
+  word-spacing: 0.3rem;
+  line-height: 1.3rem;
+  color: hsl(0deg, 0%, 98%);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+footer .right .extras > p:hover {
+  color: hsl(12deg, 88%, 59%);
+}
+footer .right .search {
+  display: flex;
+  gap: 0.6rem;
+}
+footer .right .search input {
+  border-radius: 2rem;
+  border: 0px solid;
+  padding: 1rem 2rem;
+  outline: none;
+}
+footer .right .search input::-moz-placeholder {
+  font-weight: bold;
+  font-size: 0.7rem;
+}
+footer .right .search input:-ms-input-placeholder {
+  font-weight: bold;
+  font-size: 0.7rem;
+}
+footer .right .search input::placeholder {
+  font-weight: bold;
+  font-size: 0.7rem;
+}
+footer .right .search input:focus {
+  border: 2px solid hsl(12deg, 88%, 59%);
+}
+footer .right .search button {
+  background: hsl(12deg, 88%, 59%);
+  padding: 0.9rem 2.5rem;
+  border-radius: 2.5rem;
+  border: none;
+  color: hsl(0deg, 0%, 98%);
+  font-weight: bold;
+  cursor: pointer;
+  padding: 1rem 1.8rem;
+  font-size: 0.6rem;
+  font-weight: bold;
+  font-size: 0.7rem;
+}
+footer .right .search button:hover {
+  background: hsl(12deg, 100%, 74%);
+}
+
+@media (min-width: 769px) {
+  .hamburger-icon {
+    visibility: hidden;
+  }
+}
+@media (max-width: 1024px) and (min-width: 769px) {
+  .navbar {
+    gap: 1rem;
+  }
+  .navbar_logo img {
+    width: 7rem;
+  }
+  .navbar_routes a {
+    font-size: 0.6rem;
+  }
+  .navbar_btn button {
+    padding: 0.7rem 1rem;
+    font-size: 0.6rem;
+  }
+  .section-1 .left {
+    margin-top: 2rem;
+  }
+  .section-1 .left h1 {
+    font-size: 1.5rem;
+  }
+  .section-1 .left p {
+    font-size: 0.8rem;
+    word-spacing: 0.2rem;
+    width: 100%;
+  }
+  .section-1 .left button {
+    padding: 0.8rem 1.7rem;
+    font-size: 0.6rem;
+  }
+  .section-2 p {
+    font-size: 0.8rem;
+    word-spacing: 0.2rem;
+  }
+  .section-3 {
+    padding: 0 3rem;
+  }
+  .section-3 .slider {
+    margin: 1rem 3rem;
+  }
+  .section-4 h1 {
+    font-size: 1.5rem;
+  }
+  footer {
+    padding: 3rem 1.8rem;
+  }
+  footer .left {
+    gap: 3rem;
+  }
+  footer .left .logo {
+    gap: 2.5rem;
+  }
+  footer p {
+    font-size: 0.7rem;
+  }
+  footer .right {
+    gap: 2rem;
+  }
+  footer .right .search input {
+    padding: 1rem 1rem;
+  }
+}
+@media (max-width: 768px) and (min-width: 481px) {
+  .navbar {
+    margin: 1.7rem 1rem;
+  }
+  .navbar_routes, .navbar_btn {
+    display: none;
+  }
+  .navbar .hamburger-icon {
+    display: block;
+  }
+  .section-1 {
+    flex-direction: column-reverse;
+    margin: 1.5rem 1rem;
+    padding: 1rem 2rem;
+    align-items: center;
+  }
+  .section-1 .right img {
+    min-height: auto;
+  }
+  .section-1 .left {
+    gap: 1rem;
+    text-align: center;
+  }
+  .section-1 .left h1 {
+    font-size: 1.5rem;
+    width: auto;
+  }
+  .section-1 .left p {
+    width: auto;
+  }
+  .section-1 button {
+    padding: 0.9rem 1.5rem;
+    font-size: 0.7rem;
+    margin: 0 auto;
+  }
+  .section-2 {
+    margin: 1rem 2rem;
+    padding: 1rem 1rem;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .section-2 p {
+    width: 0.8rem;
+  }
+  .section-2 .left {
+    width: auto;
+  }
+  .section-2 .left h1 {
+    font-size: 1.5rem;
+  }
+  .section-2 .left p {
+    font-size: 0.8rem;
+    width: auto;
+  }
+  .section-2 .right {
+    width: auto;
+  }
+  .section-4 h1 {
+    font-size: 1.2rem;
+  }
+  .section-4 button {
+    padding: 0.5rem 2.5rem;
+  }
+  footer {
+    flex-direction: column-reverse;
+    padding: 3rem;
+  }
+  footer .left {
+    flex-direction: column-reverse;
+    gap: 3rem;
+  }
+  footer .left .logo {
+    gap: 2.5rem;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  footer .left .routes {
+    gap: 0.4rem;
+  }
+  footer .right {
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+  footer .right .extras {
+    gap: 0.4rem;
+  }
+}
+@media only screen and (max-device-width: 480px) {
+  .navbar {
+    margin: 1.7rem 1rem;
+    align-items: center;
+  }
+  .navbar_routes, .navbar_btn {
+    display: none;
+  }
+  .navbar_logo {
+    width: 8rem;
+  }
+  .section-1 {
+    margin: 1rem 1rem;
+    padding: 1rem 1rem;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .section-1 p {
+    width: 0.8rem;
+    width: auto;
+  }
+  .section-1 .left {
+    gap: 1rem;
+  }
+  .section-1 .left h1 {
+    font-size: 1.3rem;
+    width: auto;
+  }
+  .section-1 .left p {
+    width: auto;
+    font-size: 0.8rem;
+    word-spacing: 0.2rem;
+  }
+  .section-1 .left button {
+    padding: 0.9rem 1.5rem;
+    margin: 0 auto;
+  }
+  .section-1 .right img {
+    min-height: auto;
+  }
+  .section-2 {
+    margin: 2rem 2rem;
+    padding: 1rem 2rem;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  .section-2 .left {
+    width: auto;
+  }
+  .section-2 h1 {
+    font-size: 1.5rem;
+  }
+  .section-2 p {
+    width: auto;
+    font-size: 0.8rem;
+    word-spacing: 0.2rem;
+  }
+  .section-2 .right {
+    width: auto;
+  }
+  .section-2 .right h1 {
+    font-size: 1rem;
+  }
+  .section-3 h1 {
+    text-align: center;
+  }
+  .section-3 button {
+    padding: 0.9rem 1.5rem;
+    margin: 0 auto;
+  }
+  .section-4 h1 {
+    font-size: 1rem;
+  }
+  .section-4 button {
+    padding: 0.5rem 1.5rem;
+  }
+  footer {
+    flex-direction: column-reverse;
+    padding: 3rem;
+  }
+  footer p {
+    width: auto;
+    font-size: 0.8rem;
+    word-spacing: 0.2rem;
+  }
+  footer .left {
+    flex-direction: column-reverse;
+    gap: 3rem;
+  }
+  footer .left .logo {
+    gap: 2.5rem;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  footer .left .routes {
+    gap: 0.4rem;
+  }
+  footer .right {
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+  footer .right .extras {
+    gap: 0.4rem;
+  }
+}/*# sourceMappingURL=style.css.map */

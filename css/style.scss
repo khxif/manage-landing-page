@@ -1,0 +1,582 @@
+@import './constants';
+@import './variables';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+body{
+    max-width: 100%;
+    background-image: url(../images/bg-tablet-pattern.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+.navbar{
+    @include flexSpaceBtw;
+    align-items: center;
+    margin: 1.7rem 3rem;
+    padding: 1.5rem 3rem;
+    &_logo{
+    color: black;
+    cursor: pointer;
+    }
+    &_routes{
+        @include flex;
+        gap: 1.8rem;
+    }
+    &_routes a{
+        color: $Dark-blue;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.8rem;
+        &:hover{
+            color: $Dark-grayish-blue;
+        }
+    }
+    &_btn{
+        button{
+            @include button;
+        }
+    }
+    .hamburger{
+        @include flexAlign;
+        .hamburger-icon{
+            cursor: pointer;
+        }
+        .close-icon{
+            visibility: hidden;
+            cursor: pointer;
+        }
+    }
+    .menu{
+        visibility: hidden;
+        background: $Vary-light-gray;
+        background-color: $Vary-light-gray;
+        color: $Very-dark-blue;
+        position: absolute;
+        width: 80%;
+        right: 10%;
+        top: 20%;
+        text-align: center;
+        @include flexCol;
+        gap: 1rem;
+        font-weight: bold;
+        font-size: 1rem;
+        padding: 1rem 0;
+        h2{
+            cursor: pointer;
+
+            &:hover{
+                color: $bright-red;
+            }
+        }
+    }
+}
+.section-1{
+    margin:  1.5rem 4rem;
+    padding: 1rem 2rem;
+    @include flex;
+    div{
+       width: 50%;
+    }
+    .left{
+        @include flexCol;
+        margin-top: 5rem;
+        align-items: flex-start;
+        gap: 2rem;
+        flex-shrink: 3;
+        h1{
+           @include headings;
+            width: 75%;
+        }
+        p{
+            @include paragraph;
+        }
+        button{
+            align-items: flex-start;
+            @include button;
+        }
+    }
+    .right{
+        img{
+            object-fit: cover;
+            width: 100%;
+            min-height: 41vh;
+        }
+    }
+}
+.section-2{
+    margin: 3rem 4rem;
+    padding: 1rem 2rem;
+    @include flex;
+    gap: 1rem;
+    h1{
+        @include headings;
+    }
+    p{
+        @include paragraph;
+    }
+    .left{
+        width: 50%;
+        @include flexCol;
+        gap: 2rem;
+    }
+    .right{
+        width: 50%;
+        h1{
+            font-size: 1.2rem;
+        }
+        p{
+            width: auto;
+        }
+       .content{
+        @include flex;
+        gap: 1.8rem;
+        margin-bottom: 2.5rem;
+        .index{
+            width: 4rem;
+            padding: 1rem;
+            background-color: $bright-red;
+            height: 2rem;
+            border-radius: 1rem;
+            @include flexAlign;
+            h1{
+                font-weight: bold;
+                font-size: 1rem;
+                color: $Vary-light-gray;
+            }
+        }
+        .texts{
+            @include flexCol;
+            gap: 1rem;
+        }
+       }
+    }
+}
+.section-3{
+    padding: 1rem;
+    h1{
+        @include textCenter;
+    }
+    .slider{
+        @include flex;
+        gap: 3rem;
+        margin: 1.5rem 3rem ;
+        padding: 0rem 2rem;
+        overflow: auto;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+    
+    .comments{
+        min-width: 25rem;
+        @include flexCol;
+        @include flexAlign;
+
+        img{
+            width: 5rem;
+            height: 5rem;
+            position: relative;
+            top: 15%;
+        }
+        .info{
+            background: $Vary-light-gray;
+            padding: 3rem 2rem;
+            @include flexCol;
+            gap: 1.2rem;
+            max-height: 12rem;
+            @include flexCenter;
+            h1{
+                margin-top: 1.5rem;
+                @include headings;
+            }
+            p{
+                @include paragraph;
+                width: 100%;
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
+    button{
+        @include button;
+    }
+    .btn{
+        @include flexCenter;
+        margin: 2rem 0rem 0rem 0rem;
+    }
+}
+.section-4{
+    background: $bright-red;
+    padding: 4rem 5.5rem;
+    margin: 3em 0rem 0rem 0rem;
+    background-image: url('../images/bg-simplify-section-desktop.svg');
+    background-size: cover;
+    @include flexSpaceBtw;
+    @include flexAlign;
+    h1{
+        @include headings;
+        color: $Vary-light-gray;
+        width: 45%;
+    }
+    button{
+        @include button;
+        background: $Vary-light-gray;
+        color: $bright-red;
+        height: 3.5rem;
+    }
+}
+footer{
+    padding: 4rem;
+    background-color: $Very-dark-blue;
+    @include flex;
+    justify-content: space-around;
+    .left{
+        @include flexSpaceBtw;
+        gap: 9rem;
+    .logo{
+        @include flexCol;
+        gap: 3.5rem;
+        .socials{
+            @include flexAlign;
+            gap: 0.5rem;
+        }
+    }
+    .routes{
+        @include paragraph;
+        color: $Vary-light-gray;
+        cursor: pointer;
+        @include flexCol;
+        gap: 0.3rem;
+        &>p:hover{
+            color: $bright-red;
+        }
+       }
+    }
+    .right{
+        @include flex;
+        gap: 5rem;
+        .extras{
+            @include paragraph;
+            color: $Vary-light-gray;
+            cursor: pointer;
+            @include flexCol;
+            gap: 0.3rem;
+            &>p:hover{
+                color: $bright-red;
+            }
+           }
+    .search{
+        @include flex;
+        gap: 0.6rem;
+
+        input{
+            border-radius: 2rem;
+            border: 0px solid;
+            padding: 1rem 2rem;
+            outline: none;
+            &::placeholder{
+                font-weight: bold;
+                font-size: 0.7rem;
+            }
+            &:focus{
+                border: 2px solid $bright-red;
+            }
+        }
+        button{
+            @include button;
+            padding: 1rem 1.8rem;
+            font-size: 0.6rem;
+            font-weight: bold;
+            font-size: 0.7rem;
+        }
+    }
+}
+}
+@media (min-width:769px){
+    .hamburger-icon{
+        visibility: hidden;
+    }
+}
+@media (max-width:1024px) and (min-width:769px){
+    .navbar{
+        gap: 1rem;
+        &_logo{
+            img{
+            width: 7rem;
+            }
+        }
+        &_routes{
+            a{
+            font-size: 0.6rem;
+            }
+        }
+        &_btn{
+            button{
+            padding: 0.7rem 1rem;
+            font-size: 0.6rem;
+            }
+        }
+    }
+    .section-1{
+        .left{
+            margin-top: 2rem;
+            h1{
+            font-size: 1.5rem;
+        }
+        p{
+            font-size: 0.8rem;
+            word-spacing: 0.2rem;
+            width: 100%;
+        }
+        button{
+                padding: 0.8rem 1.7rem;
+                font-size: 0.6rem;
+        }
+    }
+}
+    .section-2{
+        p{
+            font-size: 0.8rem;
+            word-spacing: 0.2rem;
+        }
+    }
+    .section-3{
+        padding: 0 3rem;
+
+        .slider{
+            margin: 1rem 3rem;
+        }
+    }
+    .section-4{
+        h1{
+            font-size: 1.5rem;
+        }
+    }
+    footer{
+        padding: 3rem 1.8rem;
+        .left{
+            gap: 3rem;
+            .logo{
+                gap: 2.5rem;
+            }
+        }
+        p{
+            font-size: 0.7rem;
+        }
+        .right{
+            gap: 2rem;
+        .search{
+         input{
+        padding: 1rem 1rem;
+         }
+    }
+        }
+    }
+}
+
+@media (max-width:768px) and (min-width:481px){
+    .navbar{
+        margin: 1.7rem 1rem;
+        &_routes,&_btn{
+            display: none;
+        }
+       .hamburger-icon{
+        display: block;
+       }
+    }
+    .section-1{
+        flex-direction: column-reverse;
+        margin: 1.5rem 1rem;
+        padding: 1rem 2rem;
+        align-items: center;
+        .right{
+            img{
+                min-height: auto;
+            }
+        }
+        .left{
+            gap: 1rem;
+            text-align: center;
+            h1{
+                font-size: 1.5rem;
+                width: auto;
+            }
+            p{
+                width: auto;
+            }
+        }
+        button{
+            padding: 0.9rem 1.5rem;
+            font-size: 0.7rem;
+            margin: 0 auto;
+        }
+    }
+    .section-2{
+        margin: 1rem 2rem;
+        padding: 1rem 1rem;
+        flex-direction: column;
+        gap: 2rem;
+        p{
+            width: 0.8rem;
+        }
+        .left{
+            width: auto;
+            h1{
+                font-size: 1.5rem;
+            }
+            p{
+                font-size: 0.8rem;
+                width: auto;
+            }
+        }
+        .right{
+            width: auto;
+        }
+    }
+    .section-4{
+        h1{
+            font-size: 1.2rem;
+        }
+        button{
+            padding: 0.5rem 2.5rem;
+        }
+    }
+    footer{
+        flex-direction: column-reverse;
+        padding: 3rem;
+        .left{
+            flex-direction: column-reverse;
+            gap: 3rem;
+            .logo{
+                gap: 2.5rem;
+                align-items: center;
+                flex-direction: column-reverse;
+            }
+            .routes{
+                gap: 0.4rem;
+            }
+        }
+        .right{
+            flex-direction: column-reverse;
+            gap: 2rem;
+            .extras{
+                gap: 0.4rem;
+            }
+        }
+    }
+}
+@media only screen and (max-device-width: 480px) {
+    .navbar{
+        margin: 1.7rem 1rem;
+        align-items: center;
+        &_routes,&_btn{
+            display: none;
+        }
+        &_logo{
+            width: 8rem;
+        }
+    }
+    .section-1{
+        margin: 1rem 1rem;
+        padding: 1rem 1rem;
+        flex-direction: column-reverse;
+        align-items: center;
+        p{
+            width: 0.8rem;
+            width: auto;
+        }
+       .left{
+        gap: 1rem;
+        h1{
+            font-size: 1.3rem;
+            width: auto;
+        }
+        p{
+            width: auto;
+            font-size: 0.8rem;
+            word-spacing: 0.2rem;
+        }
+        button{
+            padding: 0.9rem 1.5rem;
+            margin: 0 auto;
+        }
+       }
+       .right{
+        img{
+            min-height: auto;
+        }
+       }
+    }
+    .section-2{
+        margin: 2rem 2rem;
+        padding: 1rem 2rem;
+        flex-direction: column;
+        gap: 0.8rem;
+        .left{
+            width: auto;
+        }
+       h1{
+        font-size: 1.5rem;
+       }
+       p{
+        width: auto;
+        font-size: 0.8rem;
+        word-spacing: 0.2rem;
+       }
+       .right{
+        width: auto;
+        h1{
+            font-size: 1rem;
+        }
+       }
+    }
+    .section-3{
+        h1{
+            text-align: center;
+        }
+        button{
+            padding: 0.9rem 1.5rem;
+            margin: 0 auto;
+        }
+    }
+    .section-4{
+        h1{
+            font-size: 1rem;
+        }
+        button{
+            padding: 0.5rem 1.5rem;
+        }
+    }
+    footer{
+        flex-direction: column-reverse;
+        padding: 3rem;
+        p{
+            width: auto;
+            font-size: 0.8rem;
+            word-spacing: 0.2rem;
+        }
+        .left{
+            flex-direction: column-reverse;
+            gap: 3rem;
+            .logo{
+                gap: 2.5rem;
+                align-items: center;
+                flex-direction: column-reverse;
+            }
+            .routes{
+                gap: 0.4rem;
+            }
+        }
+        .right{
+            flex-direction: column-reverse;
+            gap: 2rem;
+            .extras{
+                gap: 0.4rem;
+            }
+        }
+    }
+}
